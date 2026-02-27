@@ -3,15 +3,20 @@
 **Cédric Damour**  
 ENERGY-Lab, Université de La Réunion, Saint-Denis, La Réunion, France
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18803446.svg)](https://doi.org/10.5281/zenodo.18803446)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
+
 ---
 
 ## Overview
 
 This repository contains the complete implementation supporting the article:
 
-> **Retrodictive Forecasting: A Proof-of-Concept for Exploiting Temporal Asymmetry in Time Series Prediction*  
-> Cédric Damour, *arXiv*, 2026 `[Arxiv_DOI_PLACEHOLDER]` 
-> DOI: `[ZENODO_DOI_PLACEHOLDER]`
+> **Retrodictive Forecasting: A Proof-of-Concept for Exploiting Temporal Asymmetry in Time Series Prediction**  
+> Cédric Damour, *arXiv*, 2026 `[ARXIV_ID_PLACEHOLDER]`  
+> Code DOI: [10.5281/zenodo.18803446](https://doi.org/10.5281/zenodo.18803446)
 
 The core idea inverts the conventional forecasting paradigm: instead of
 predicting the future from the past, we identify the future state *y\** that
@@ -36,7 +41,7 @@ This yields a Go / No-Go decision before any model is trained.
 ├── config.py                        # All hyperparameters and case definitions
 ├── generators.py                    # Synthetic series generators + ERA5 loader
 ├── models.py                        # InverseCVAE, ForwardCVAE, MLP, RealNVP
-├── inference.py                     # MAP inference (multi-start L-BFGS + FIC)
+├── inference.py                     # MAP inference (multi-start adam + FIC)
 ├── diagnostics.py                   # Arrow-of-time diagnostic (J-divergence)
 ├── evaluation.py                    # Metrics, DM tests, bootstrap CI
 ├── plotting.py                      # All 14 publication figures
@@ -70,7 +75,7 @@ This yields a Go / No-Go decision before any model is trained.
 - PyTorch ≥ 2.0 (CPU or GPU)
 
 ```bash
-git clone https://github.com/[GITHUB_USERNAME]/retrodictive-forecasting.git
+git clone https://github.com/cdamour/retrodictive-forecasting.git
 cd retrodictive-forecasting
 pip install -r requirements.txt
 ```
@@ -98,7 +103,7 @@ licence). To reproduce the ERA5 cases:
    ```
 
 Without ERA5 files the four synthetic cases (A–D) run fully and reproduce all
-falsifiable predictions P1–P5.
+falsifiable predictions P1–P4.
 
 ---
 
@@ -198,16 +203,27 @@ Arrow-of-time diagnostic:
 
 ## Citation
 
-If you use this code in your research, please cite:
+If you use this code in your research, please cite the paper and the software:
 
 ```bibtex
 @article{damour2026retrodictive,
-  title   = {Retrodictive Forecasting: Inverse Inference for Time Series
-             via Conditional Variational Autoencoders},
+  title   = {Retrodictive Forecasting: A Proof-of-Concept for Exploiting
+             Temporal Asymmetry in Time Series Prediction},
   author  = {Damour, C{\'e}dric},
   journal = {arXiv},
   year    = {2026},
-  doi     = {[PAPER_DOI_PLACEHOLDER]}
+  note    = {[ARXIV_ID_PLACEHOLDER]}
+}
+
+@software{damour2026zenodo,
+  author    = {Damour, C{\'e}dric},
+  title     = {Retrodictive Forecasting: A Proof-of-Concept for Exploiting
+               Temporal Asymmetry in Time Series Prediction},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.0.1},
+  doi       = {10.5281/zenodo.18803446},
+  url       = {https://doi.org/10.5281/zenodo.18803446}
 }
 ```
 
@@ -227,5 +243,5 @@ included in this repository.
 Cédric Damour  
 ENERGY-Lab, Université de La Réunion  
 Saint-Denis, La Réunion, France  
-`cedric.damour@univ-reunion.fr` 
-ORCID : https://orcid.org/0000-0002-1399-2729
+`cedric.damour@univ-reunion.fr`  
+ORCID: [0000-0002-1399-2729](https://orcid.org/0000-0002-1399-2729)
