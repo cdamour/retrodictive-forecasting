@@ -1,0 +1,84 @@
+# =============================================================================
+# .gitignore — Retrodictive Forecasting
+# Cédric Damour, ENERGY-Lab, Université de La Réunion
+# =============================================================================
+
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]          # .pyc, .pyo, .pyd
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+
+# ── Environnements virtuels ───────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+ENV/
+
+
+# ── Données ERA5 / NetCDF (licence Copernicus — ne jamais redistribuer) ───────
+*.nc
+*.nc4
+*.nc3
+*.grib
+*.grib2
+*.grb
+*.grb2
+*.h5
+*.hdf5
+
+
+# ── Checkpoints et modèles entraînés (fichiers lourds, reproductibles) ────────
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+checkpoints/
+saved_models/
+
+
+# ── Sorties de calcul (reproductibles via reproduce_all.sh) ──────────────────
+outputs/
+# Si vous voulez versionner les 14 figures PNG de référence du papier,
+# commentez la ligne "outputs/" ci-dessus et décommentez les deux lignes suivantes :
+# outputs/*.json
+# outputs/<case_name>/
+
+
+# ── Fichiers temporaires et logs ──────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+logs/
+runs/          # TensorBoard runs
+
+
+# ── Jupyter Notebooks (si utilisés ponctuellement) ───────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+
+# ── IDE et éditeurs ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# ── Système d'exploitation ────────────────────────────────────────────────────
+.DS_Store          # macOS
+Thumbs.db          # Windows
+desktop.ini        # Windows
+
+
+# ── Divers ────────────────────────────────────────────────────────────────────
+*.swp              # Vim swap files
+*~                 # Fichiers de sauvegarde éditeur

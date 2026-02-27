@@ -1,0 +1,30 @@
+# Requirements for Retrodictive Forecasting — Proof of Concept
+# Cédric Damour, ENERGY-Lab, Université de La Réunion
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Python >= 3.9 recommended.
+# Tested with Python 3.10 and 3.11.
+#
+# GPU (optional): replace the torch line with the appropriate
+# CUDA wheel from https://pytorch.org/get-started/locally/
+# e.g.:  pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# ── Deep learning ──────────────────────────────────────────────────────────────
+torch>=2.0.0
+
+# ── Numerical / scientific computing ──────────────────────────────────────────
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+
+# ── ERA5 / NetCDF data loading (optional — only needed for ERA5 cases) ────────
+xarray>=2023.1.0
+netcdf4>=1.6.3
+
+# ── Standard library (no install required) ────────────────────────────────────
+# argparse, json, os, sys, time, datetime, math, dataclasses, enum, typing
