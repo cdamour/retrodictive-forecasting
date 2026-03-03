@@ -4,6 +4,7 @@
 ENERGY-Lab, Université de La Réunion, Saint-Denis, La Réunion, France
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18803446.svg)](https://doi.org/10.5281/zenodo.18803446)
+[![DOI](https://img.shields.io/badge/DOI-10.48550%2FarXiv.2603.00636-blue)](https://doi.org/10.48550/arXiv.2603.00636)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
@@ -15,7 +16,7 @@ ENERGY-Lab, Université de La Réunion, Saint-Denis, La Réunion, France
 This repository contains the complete implementation supporting the article:
 
 > **Retrodictive Forecasting: A Proof-of-Concept for Exploiting Temporal Asymmetry in Time Series Prediction**  
-> Cédric Damour, *arXiv*, 2026 `[ARXIV_ID_PLACEHOLDER]`  
+> Cédric Damour, *arXiv*, 2026 — [arXiv:2603.00636 \[cs.LG\]](https://arxiv.org/abs/2603.00636) — DOI: [10.48550/arXiv.2603.00636](https://doi.org/10.48550/arXiv.2603.00636)  
 > Code DOI: [10.5281/zenodo.18803446](https://doi.org/10.5281/zenodo.18803446)
 
 The core idea inverts the conventional forecasting paradigm: instead of
@@ -212,7 +213,11 @@ If you use this code in your research, please cite the paper and the software:
   author  = {Damour, C{\'e}dric},
   journal = {arXiv},
   year    = {2026},
-  note    = {[ARXIV_ID_PLACEHOLDER]}
+  eprint  = {2603.00636},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi     = {10.48550/arXiv.2603.00636},
+  url     = {https://arxiv.org/abs/2603.00636}
 }
 
 @software{damour2026zenodo,
